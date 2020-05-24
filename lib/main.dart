@@ -6,25 +6,26 @@ void main() {
 }
 
 class NeumorphicApp extends StatelessWidget {
-  // This widget is the root of your application.
+  final baseColor = Colors.blueGrey[100];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Neumorphic App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        backgroundColor: Colors.blueGrey.shade200,
-        scaffoldBackgroundColor: Colors.blueGrey.shade200,
-        dialogBackgroundColor: Colors.blueGrey.shade200,
+        backgroundColor: baseColor,
+        scaffoldBackgroundColor: baseColor,
+        dialogBackgroundColor: baseColor,
       ),
       home: Scaffold(
-        backgroundColor: Colors.blueGrey.shade200,
+        backgroundColor: baseColor,
         body: Center(
           child: NeumorphicContainer(
             child: Text(
               'Neumorphic',
               style: TextStyle(
-                color: Color.lerp(Colors.blueGrey.shade200, Colors.black, 0.4),
+                color: Color.lerp(baseColor, Colors.black, 0.4),
                 fontSize: 18.0,
                 fontWeight: FontWeight.w500,
               )
